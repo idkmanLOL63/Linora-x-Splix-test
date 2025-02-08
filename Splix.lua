@@ -1,7 +1,6 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/Splix"))()
 local window = library:new({textsize = 13.5,font = Enum.Font.RobotoMono,name = "SkibidiToilet sccript yipeeee",color = Color3.fromRGB(255,255,255)})
 
-local triggerbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stratxgy/Roblox-Lua-Triggerbot/refs/heads/main/Triggerbot.lua"))()
 local dhlock = loadstring(game:HttpGet("https://raw.githubusercontent.com/Stratxgy/DH-Lua-Lock/refs/heads/main/Main.lua"))()
 
 local aimtab = window:page({name = "Aim Features"})
@@ -10,11 +9,6 @@ local section1 = aimtab:section({name = "Aim Settings",side = "left",size = 250}
 section1:toggle({name = "Aimbot",def = false,callback = function(value)
   tog = value
   getgenv().dhlock.enabled = tog
-end})
-
-section1:toggle({name = "TriggerBot",def = false,callback = function(value)
-  tog = value
-  getgenv().triggerbot.load()
 end})
 
 section1:toggle({name = "Show FOV",def = false,callback = function(value)
